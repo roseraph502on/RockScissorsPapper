@@ -45,6 +45,7 @@ function App() {
     setComputerSelect(computerChoice); 
     judgement(choice[userChoice],computerChoice)
     setResult(judgement(choice[userChoice],computerChoice))
+    console.log("결과:",result);
   }
   // 컴퓨터 값
   const randomChoice=()=>{
@@ -61,9 +62,9 @@ function App() {
     if(user.name == computer.name){
       return "tie"
     }else if (user.name=="Rock")return computer.name=="Scissors"?"win":"lose"
-    else if (user.name=="Scissors")return computer.name=="paper"?"win":"lose"
+    else if (user.name=="Scissors")return computer.name=="Paper"?"win":"lose"
     else if (user.name=="Paper")return computer.name=="Rock"?"win":"lose"
-  }
+  };
   // const getComputerResult=(result)=>{
   //   if (result == "win"){ 
   //     return "lose" 
